@@ -1,42 +1,30 @@
-import java.util.Scanner;
+import modelo.Pelicula;
+import modelo.Serie;
 
 public class Main {
     public static void main(String[] args) throws Exception {
-        System.out.println("Primera impresion del curso de inmersion en Java");
-        //System.out.println("Pelicula Rescatando al Soldado Ryan");
 
-        //Declaracion de variables
-        int fechaDeLanzamiento = 1998;
-        double evaluacion = 4.5;
-        boolean incluidoEnElPlanBase = true;
-        String nombre = "Rescatando al Soldado Ryan";
-        String sinopsis = """
-            Después de desembarcar en Normandía, en plena Segunda Guerra Mundial, unos soldados norteamericanos deben arriesgar sus vidas para salvar al soldado James Ryan, cuyos tres hermanos han muerto en la guerra.
-                """;
-        double mediaEvaluacionUsuario = 0;
+        Principal principal = new Principal();
+        principal.muestraElMenu();
+       
+        // Pelicula harryPotter = new Pelicula();
+        // harryPotter.setNombre("Harry Potter");
+        // harryPotter.setFechaDeLanzamiento(2001);
+        // harryPotter.setTiempoDeDuracionEnMinutos(129);
+        // harryPotter.muestraFichaTecnica();
 
-        System.out.println("Pelicula: " + nombre);
-        System.out.println("Fecha de Lanzamiento: " + fechaDeLanzamiento);
-        System.out.println("Evaluacion: " + evaluacion);
-        System.out.println("Incluido en el plan Base: " + incluidoEnElPlanBase);
+        // Pelicula dunkerque = new Pelicula();
+        // dunkerque.setNombre("Dunkerque");
+        // dunkerque.setFechaDeLanzamiento(2017);
+        // dunkerque.setTiempoDeDuracionEnMinutos(109);
+        // dunkerque.muestraFichaTecnica();
 
-        double mediaEvaluacion = (4.5 + 5 + 3) / 3;
-        System.out.println("Media de Evalucaion: " + mediaEvaluacion);
-     
-        if (fechaDeLanzamiento >= 2022) {
-            System.out.println("Pelicula Popular en el Momento");
-        } else {
-            System.out.println("Pelicula Retro en Tendencia");
-        }
-
-        for (int i = 0; i < 3; i++) {
-            Scanner teclado = new Scanner(System.in);
-            System.out.println("Ingresa tu puntuacion sobre la pelicula:");
-            double notaUsuario = teclado.nextDouble();
-            mediaEvaluacionUsuario = mediaEvaluacionUsuario + notaUsuario;
-        } 
-        System.out.println("La media de la pelicula, da un resultado de: " +
-                mediaEvaluacionUsuario / 3);
-
+        // Serie fallout = new Serie();
+        // fallout.setNombre("Fallout");
+        // fallout.setFechaDeLanzamiento(2024);
+        // fallout.setTemporadas(1);
+        // fallout.setEpisodiosPorTemporada(8);
+        // fallout.setDuracionEnMinutosPorEpisodio(60);
+        // fallout.muestraFichaTecnica();
     }
 }
